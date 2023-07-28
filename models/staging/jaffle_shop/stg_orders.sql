@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from hive_metastore.default.jaffle_shop_orders
+    from {{ source('jaffle_shop', 'jaffle_shop_orders') }}
 
 )
 
