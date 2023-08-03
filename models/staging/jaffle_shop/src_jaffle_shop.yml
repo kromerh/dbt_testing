@@ -2,18 +2,23 @@ version: 2
 
 sources: 
   - name: jaffle_shop
+    description: clone of Postgres App database
     database: hive_metastore
     schema: default
     tables:
       - name: jaffle_shop_customers
+        description: raw customer data
         columns:
           - name: id
+            description: primary key
             tests:
               - unique
               - not_null
       - name: jaffle_shop_orders
+        description: raw orders table
         columns:
           - name: id
+            description: primary key 
             tests:
               - unique              
               - not_null
